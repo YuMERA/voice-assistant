@@ -1,0 +1,145 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+h1 {
+    color: #0d47a1;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+button {
+    background-color: #0d47a1;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #1565c0;
+}
+
+button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+button:disabled {
+    background-color: #b0bec5;
+    cursor: not-allowed;
+}
+
+.output-container {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 150px;
+    text-align: left;
+}
+
+#status {
+    color: #888;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+#output {
+    min-height: 150px; /* Postavlja minimalnu visinu */
+    max-height: 300px; /* Postavlja maksimalnu visinu */
+    overflow-y: auto; /* Omogućava skrolovanje po vertikali */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+#commandsLog {
+    max-height: 100px; /* Smanjeno na otprilike 4-5 linija */
+    overflow-y: auto; /* Omogućava skrolovanje po vertikali */
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+#commandsLog p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.settings {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.settings label {
+    font-size: 0.9rem;
+    color: #555;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 15px; /* Dodatni razmak */
+}
+
+.settings input[type="number"] {
+    width: 60px;
+    margin-left: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Responzivnost za mobilne telefone */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

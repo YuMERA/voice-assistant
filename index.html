@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glasovni asistent</title>
+    <link rel="stylesheet" href="/moja-app/assets/css/style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Glasovni asistent</h1>
+        <p>
+            Pritisnite dugme "Pokreni" i izgovorite komandu. Na primer: "Koliko je sati?", "Koji je datum?", "Pročitaj tekst".
+        </p>
+
+        <div class="controls">
+            <button id="startButton">Pokreni</button>
+            <button id="stopButton" disabled>Zaustavi</button>
+            <button id="saveButton">Sačuvaj (Kopiraj)</button>
+        </div>
+
+        <div class="output-container">
+            <p id="status"></p>
+            <div id="output"></div>
+        </div>
+
+        <div id="commandsLog"></div>
+        
+        <div class="settings">
+            <label>
+                <input type="checkbox" id="voiceConfirmation" checked>
+                Glasovna potvrda komandi
+            </label>
+            <label>
+                <input type="checkbox" id="autoCapitalize" checked>
+                Automatska velika slova
+            </label>
+            <label>
+                <input type="checkbox" id="autoPunctuation" checked>
+                Automatsko dodavanje tačke
+            </label>
+            <label>
+                Vreme pauze (ms):
+                <input type="number" id="pauseDuration" value="1500" min="500" step="100">
+            </label>
+        </div>
+    </main>
+
+    <script src="/moja-app/assets/js/script.js"></script>
+</body>
+</html>
